@@ -1,0 +1,303 @@
+/* ===== Variabel warna (mudah diganti di satu tempat) ===== */
+:root {
+  --hijau: #12372a;
+  --kuning: #f2b705;
+  --latar: #f3f6f4;
+  --teks: #1d2a24;
+  --putih: #ffffff;
+}
+
+/* ===== Reset sederhana ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--latar);
+  color: var(--teks);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ===== Navbar (flexbox) ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 24px;
+  background: var(--hijau);
+  color: var(--putih);
+}
+
+.logo {
+  font-size: 1.4rem;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  color: var(--putih);
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: var(--kuning);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 72px 24px;
+  background: var(--hijau);
+  color: var(--putih);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero h2 {
+  color: var(--putih);
+  font-size: 2.2rem;
+  max-width: 18ch;
+  margin: 0 auto 8px;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-bottom: 24px;
+}
+
+/* ===== Tombol ===== */
+.tombol {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--kuning);
+  color: var(--hijau);
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tombol:hover {
+  background: #d9a404;
+}
+
+/* ===== Section ===== */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 48px 0 8px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: var(--hijau);
+}
+
+/* ===== Menu (CSS Grid) ===== */
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.kartu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: var(--putih);
+  border-left: 5px solid var(--kuning);
+  border-radius: 6px;
+}
+
+.kartu h3 {
+  font-size: 1.15rem;
+}
+
+.kartu p {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.harga {
+  font-weight: 700;
+  color: var(--hijau);
+}
+
+/* ===== Tombol kecil di kartu menu ===== */
+.tombol-kecil {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+}
+
+/* ===== Pesanan ===== */
+.kotak-pesanan {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 480px;
+  padding: 24px;
+  background: var(--putih);
+  border-radius: 6px;
+}
+
+#daftar-pesanan {
+  list-style: none;
+}
+
+#daftar-pesanan li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #dfe6e2;
+}
+
+.info-item {
+  flex: 1;
+}
+
+.info-item small {
+  display: block;
+  color: #5a6a62;
+}
+
+.atur-jumlah {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.atur-jumlah button {
+  width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: var(--latar);
+  border: 1px solid #b8c4bd;
+  border-radius: 4px;
+}
+
+.total {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--hijau);
+}
+
+#pesanan-kosong {
+  color: #5a6a62;
+}
+
+.tombol:disabled {
+  background: #d5dbd8;
+  color: #7b8780;
+  cursor: not-allowed;
+}
+
+/* ===== Tabel ===== */
+.tabel-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--putih);
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #dfe6e2;
+}
+
+thead th {
+  background: var(--hijau);
+  color: var(--putih);
+}
+
+tbody tr:nth-child(even) {
+  background: #f8faf9;
+}
+
+tbody tr:hover {
+  background: #fff6d6;
+}
+
+/* ===== Form ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 480px;
+  padding: 24px;
+  background: var(--putih);
+  border-radius: 6px;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  font: inherit;
+  border: 1px solid #b8c4bd;
+  border-radius: 4px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--kuning);
+  border-color: var(--hijau);
+}
+
+form .tombol {
+  margin-top: 16px;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 56px;
+  padding: 24px;
+  text-align: center;
+  background: var(--hijau);
+  color: var(--putih);
+}
+
+/* ===== Responsive (layar HP) ===== */
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.7rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

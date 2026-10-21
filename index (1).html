@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Kenanga - Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">Warung Kenanga</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#pesanan">Pesanan</a></li>
+        <li><a href="#daftar-harga">Daftar Harga</a></li>
+        <li><a href="#reservasi">Reservasi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Masakan rumahan, harga bersahabat</h2>
+    <p>Buka setiap hari pukul 10.00 - 21.00</p>
+    <a href="#reservasi" class="tombol">Pesan tempat</a>
+  </section>
+
+  <main>
+
+    <!-- MENU (layout grid) -->
+    <section id="menu">
+      <h2>Menu Favorit</h2>
+      <div class="grid-menu">
+
+        <article class="kartu">
+          <h3>Nasi Goreng Kampung</h3>
+          <p>Nasi goreng dengan telur, ayam suwir, dan kerupuk.</p>
+          <span class="harga">Rp 18.000</span>
+          <button type="button" class="tombol tombol-kecil tambah" data-nama="Nasi Goreng Kampung" data-harga="18000">Tambah</button>
+        </article>
+
+        <article class="kartu">
+          <h3>Soto Ayam</h3>
+          <p>Kuah kuning hangat dengan bihun, telur, dan koya.</p>
+          <span class="harga">Rp 15.000</span>
+          <button type="button" class="tombol tombol-kecil tambah" data-nama="Soto Ayam" data-harga="15000">Tambah</button>
+        </article>
+
+        <article class="kartu">
+          <h3>Ayam Bakar Madu</h3>
+          <p>Ayam bakar dengan sambal terasi dan lalapan segar.</p>
+          <span class="harga">Rp 22.000</span>
+          <button type="button" class="tombol tombol-kecil tambah" data-nama="Ayam Bakar Madu" data-harga="22000">Tambah</button>
+        </article>
+
+        <article class="kartu">
+          <h3>Es Teh Manis</h3>
+          <p>Teh seduh dingin, manisnya pas.</p>
+          <span class="harga">Rp 5.000</span>
+          <button type="button" class="tombol tombol-kecil tambah" data-nama="Es Teh Manis" data-harga="5000">Tambah</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PESANAN -->
+    <section id="pesanan">
+      <h2>Pesanan Kamu</h2>
+      <div class="kotak-pesanan">
+        <ul id="daftar-pesanan"></ul>
+        <p id="pesanan-kosong">Belum ada menu dipilih. Klik "Tambah" pada menu di atas.</p>
+        <p class="total">Total: <span id="total">Rp 0</span></p>
+
+        <label for="nama-pemesan">Nama pemesan</label>
+        <input type="text" id="nama-pemesan" placeholder="Nama kamu">
+
+        <button type="button" id="kirim-wa" class="tombol" disabled>Pesan via WhatsApp</button>
+      </div>
+    </section>
+
+    <!-- TABEL HARGA -->
+    <section id="daftar-harga">
+      <h2>Daftar Harga</h2>
+      <div class="tabel-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Kategori</th>
+              <th>Nama menu</th>
+              <th>Harga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Makanan berat</td><td>Nasi Goreng Kampung</td><td>Rp 18.000</td></tr>
+            <tr><td>Makanan berat</td><td>Soto Ayam</td><td>Rp 15.000</td></tr>
+            <tr><td>Makanan berat</td><td>Ayam Bakar Madu</td><td>Rp 22.000</td></tr>
+            <tr><td>Camilan</td><td>Tempe Mendoan</td><td>Rp 8.000</td></tr>
+            <tr><td>Minuman</td><td>Es Teh Manis</td><td>Rp 5.000</td></tr>
+            <tr><td>Minuman</td><td>Es Jeruk</td><td>Rp 7.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FORM RESERVASI -->
+    <section id="reservasi">
+      <h2>Reservasi Meja</h2>
+      <form action="#" method="post">
+
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+
+        <label for="jumlah">Jumlah orang</label>
+        <input type="number" id="jumlah" name="jumlah" min="1" max="20" value="2">
+
+        <label for="area">Area duduk</label>
+        <select id="area" name="area">
+          <option>Dalam ruangan</option>
+          <option>Teras</option>
+          <option>Lesehan</option>
+        </select>
+
+        <label for="catatan">Catatan</label>
+        <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: tanpa pedas"></textarea>
+
+        <button type="submit" class="tombol">Kirim reservasi</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Jl. Kenanga No. 12 &copy; 2026 Warung Kenanga</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
